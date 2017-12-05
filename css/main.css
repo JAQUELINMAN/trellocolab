@@ -1,0 +1,236 @@
+* {/*estilos generales*//**/
+  margin: 0; /*para empezar desde el punto cero*/
+  padding: 0;
+  box-sizing: border-box; /* Con border-box, hacemos que el ancho especificado sea el equivalente al ancho tota*/
+  font-family: sans-serif;
+}
+
+.m-right5 {
+    margin-right: 0.5em;
+}
+
+
+body {/*color azul  para toda la pagina sin contar el encabezado */
+    background-color:#1d8dc2;
+}
+
+/*------------------------ENCABEZADO---------------------*/
+
+header {/*color y ancho de encabezado que es azul fuerte*/
+    width: 100%;
+    background-color: #0079bf;
+    position: fixed;
+}
+
+input {
+    border: none;
+    outline: none;/*outline perfila los contenidos del elemento y los encierra con una forma no rectangular*/
+}
+
+.tables h4 {/* palabra tableros*/
+    display: inline-block;
+}
+
+.tables { /* estilo de título y logo*/
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3); /*para crear un recuadro donde va la palabra tableros con su icono*/
+    padding: 0.5em;/*em es relativa respecto del tamaño de letra del elemento.*/
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin: 0.3em;
+}
+
+.search {/*estilos de el cuadro buscador*/
+    display: inline-block;
+    background:rgba(255,255,255,.3);
+    padding: 0.5em;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 5px;
+    margin-right: 770px;
+}
+
+.search input { /* el input me da un cuadro blanco po defaul por eso lo pongo transparente*/
+    background:transparent;
+}
+
+.title { /*estilos para el logo*/
+    display: inline-block; /*se comporta como bloque*/
+    position: absolute; /*para poder mover el titulo*/
+    top: 15px;
+    left: 650px;
+}
+
+.icons { /*estilos de los iconos y foto de usuario*/
+    display: inline-block;
+}
+
+.icons span { /*los inconos se comportan en bloque y se les da un recuadro de fondo */
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 0.5em;
+    font-size: 1.2em;
+    color: white;
+    border-radius: 5px;
+}
+
+
+.icons img { /*se dá estilo a la foto que está en un círculo */
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    position: absolute;
+    top: 5px;
+    right: 70px;
+  }
+
+/*------------------------estilos de la seccion uno---------------------*/
+.codeChallenges {/*Elementos de linea que se comportan en bloque letras color blanco */
+    display: inline-block;
+    color: white;
+    font-size: 1.1em;
+    margin-top: 55px;
+}
+
+.codeChallenges h3 {/*palabra tablero retos de ccodigo separado 10px de margen*/
+    margin: 10px;
+    display: inline-block;
+}
+
+.codeChallenges a {/*link en color blanco*/
+    color: white;
+}
+.codeChallenges .star {/*icono de estrella comportamiento en bloque y margen */
+    display: inline-block;
+    margin: 0 20px;
+}
+
+.codeChallenges h5 {/* texto " privado comportamiento en bloque"*/
+    display: inline-block;
+}
+
+p {/*estilo de los puntitos*/
+    display: inline-block;
+    font-weight: 900;
+    margin-left: 760px;
+}
+
+
+/*----------------------------estilos de el contenedor de targeta--------------------*/
+#container { /*todo el contenedir separado 16px*/
+    /*white-space: nowrap; los espacios en blanco, pero no añade saltos de línea en el texto original, por lo que los contenidos se pueden salir de su elemento contenedor*/
+    padding-top: 1em;
+}
+
+.d-squares {/*para que los cuadros se comporten como bloque*/
+  display: inline-block;
+}
+
+.list { /*estilos de la lista creada es donde dice Añadir Lista*/
+    width: 17em; /*o 272px es decir 17*16 que es el de default*/
+    height: 3em; /*o 48px es decir 17*16 que es el de default*/
+    margin: 0.6em 0.5em;
+    background-color: #0079bf; /*color azul como el header*/
+    padding: 0.6em;
+    color: white;
+    border-radius: 5px; /* no lo pide pero se redondeo la caja*/
+    font-family: sans-serif;
+}
+
+.d-create { /*para que no se muestre */
+  display: none;
+}
+
+/* ESTO YA ES CREADO EN JS Y ES CADA CUADRO ES DECIR UNA NUEVA LISTA*/
+.newlist { /*Estilos del nuevo elemento es decir esto se muestra como el encabezado de cada cuadro
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: #E2E4E6; /*gris*/
+    padding: 0.5em;
+    font-weight:bold;
+    border-radius: 5px;
+}
+/*creado desde js*/
+.add { /* es donde dice Añadir tarjeta que mas tarde desaparece*/
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: #E2E4E6; /*color gris*/
+    padding: 0.6em;
+    border-radius: 5px;
+    color: gray;
+}
+
+/*creado desde js*/
+.add:hover { /* para que resalte en gris más intenso*/
+    background-color: lightgray;
+}
+
+/*creado desde js*/
+.text-cards { /*es cada recuadro de las tarjetas dentro de los cuadros*/
+    width: 15em;
+    height: 3em;
+    margin: 0.6em 0.5em;
+    background-color: lightgray;
+    padding: 0.6em;
+    border-radius: 5px;
+}
+
+.opacidad { /* esto sirve para que al arrastrar me deje ver atraves de ella*/
+    background-color: grey; /* fondo gris*/
+    opacity: 0.5;
+    /*cursor: pointer; no sirvió personalizar el cursos*/
+}
+/*creado desde js*/
+.trello-body { /* contenedor cuadro con cada lista adentro */
+    padding: 0.5em;
+    margin: 0.5em;
+    width: 17em;
+    background-color: #E2E4E6; /*fondo gris*/
+    vertical-align: top;
+    border-radius: 5px;
+    display: inline-block; /* se comporta como bloque*/
+}
+
+.bg {
+    background-color: #1d8dc2; /*azul*/
+}
+/*estilos de el formulario creado en html*/
+.newform {
+    width: 17em;
+    height: auto;
+    margin: 0.6em 0.5em;
+    padding: 0.3em;
+    background-color: #E2E4E6; /*gris*/
+    border-radius: 5px;
+}
+/*estilos de el input creado en html*/
+.firstinput {
+    width: 94%;
+    margin: 0.3em 0.7em;
+    padding: 0.3em;
+    border-radius: 5px;
+    border: none;
+}
+/*estilos de el boton creado en html*/
+.boton {
+    display: block;
+    padding: 0.5em 3em;
+    margin: 0.3em 0.7em;
+    background-color: #5BAE45;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+/*estilos de el textarea creado desde js*/
+.textarea {
+    width: 92%;
+    margin: 0.3em 0.7em;
+    padding: 0.3em;
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+}
+
